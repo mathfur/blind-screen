@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimer>
+#include <QDebug>
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +19,10 @@ public:
     
 private:
     Ui::MainWindow *ui;
+    QTimer *timer;
+
+private slots:
+    void blind_off();
 };
 
 #endif // MAINWINDOW_H
