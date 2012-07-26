@@ -18,10 +18,14 @@ public:
     ~MainWindow();
     
 private:
+    static const int on_duration = 15*1000;
+    static const int off_duration = 20*60*1000;
+
     Ui::MainWindow *ui;
-    QTimer *timer;
+    QTimer *on_timer,*off_timer;
 
 private slots:
+    void blind_on();
     void blind_off();
 };
 
